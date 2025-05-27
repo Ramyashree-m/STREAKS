@@ -1,0 +1,9 @@
+class Solution:
+    def areOccurrencesEqual(self, s: str) -> bool:
+        from collections import Counter
+        ss=(Counter(s))
+        d=ss[s[0]]
+        for i in ss.values():
+            if i!=d:
+                return False 
+        return True
