@@ -1,0 +1,13 @@
+# Write your MySQL query statement below
+SELECT 
+    user_id, 
+    COUNT(DISTINCT activity_date) AS activity_count
+FROM 
+    Activity
+WHERE 
+    activity_date >= DATE_SUB(
+        (SELECT MAX(activity_date) FROM Activity), INTERVAL 30 DAY)
+GROUP BY 
+    user_id
+ORDER BY 
+    user_id;
