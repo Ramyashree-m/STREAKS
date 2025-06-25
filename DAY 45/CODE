@@ -2,7 +2,7 @@ class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         seen=set()
         for num in nums:
-            if nums in seen:
+            if num in seen:
                 return True
-            seen.add(nums)
-        return false
+            seen.add(num)
+        return False
