@@ -3,11 +3,12 @@ class Solution:
         res=[]
         i=1
         for num in target:
-            while i<  um:
-                res.append("push")
-                res.append("pop")
+            while i< num:
+                res.append("Push")
+                res.append("Pop")
                 i+=1
-            res.append("push")
+            res.append("Push")
             
             i+=1
         return res
+        
