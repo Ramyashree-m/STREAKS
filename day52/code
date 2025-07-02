@@ -1,0 +1,14 @@
+class Solution:
+    def removeDuplicateLetters(self, s: str) -> str:
+        result=[]
+        seen=set()
+        last={ch: i for i,ch in enumerate(s)}
+
+        for i,ch in enumerate(s):
+            if ch in seen:
+                continue
+            while result and ch<result[-1] and i< last[result[-1]]:
+                seen.remove(result.pop())
+            result.append(ch)
+            seen.add(ch)
+        return ''.join(result)
